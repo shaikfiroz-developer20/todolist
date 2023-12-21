@@ -5,6 +5,9 @@ import axios from 'axios';
 import { RotatingLines, Vortex } from 'react-loader-spinner';
 
 
+const sa=process.env.serveraddress;
+
+
 function Datess({ element }) {
   const formattedDateString = element.dueDate;
   return <>{formattedDateString}</>;
@@ -39,7 +42,7 @@ prop.clickeddata(e);
     const fetchHistory = async () => {
       try {
         setdataloadedstatus(true);
-        const gethistoryofdata = await axios.get("http://localhost:8000/gethistoryofdatestasksadded", { withCredentials: true });
+        const gethistoryofdata = await axios.get(`${sa}/gethistoryofdatestasksadded`, { withCredentials: true });
         setdataofdates(gethistoryofdata.data);
         setdataloaded(true);
         setdataloadedstatus(false);

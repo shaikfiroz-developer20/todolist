@@ -6,6 +6,10 @@ import axios from 'axios';
 import { Logout } from '@mui/icons-material';
 import { RotatingLines, Vortex } from 'react-loader-spinner';
 
+
+const sa=process.env.serveraddress;
+
+
 function UserProfile(prop) {
   const [userdata, setuserdata] = useState({});
   const [imageBuffer, setImageBuffer] = useState(null);
@@ -14,11 +18,11 @@ function UserProfile(prop) {
   useEffect(() => {
     const getuserdata = async () => {
       try {
-        const userdata = await axios.get("http://localhost:8000/getuserdetails", { withCredentials: true });
+        const userdata = await axios.get(`${sa}/getuserdetails`, { withCredentials: true });
         setuserdata(userdata.data);
         setLoaded(true);
 
-        const response = await axios.get("http://localhost:8000/userpic", { withCredentials: true, responseType: 'arraybuffer' });
+        const response = await axios.get(`${sa}/userpic`, { withCredentials: true, responseType: 'arraybuffer' });
 
         const blob = new Blob([response.data], { type: 'image/png' });
         const imageUrl = URL.createObjectURL(blob);
@@ -48,7 +52,7 @@ function UserProfile(prop) {
     formData.append('profileImage', imageBuffer);
 
     try {
-      const updateProfile = await axios.post("http://localhost:8000/updateprofile", formData, {
+      const updateProfile = await axios.post(`${sa}/updateprofile`, formData, {
         withCredentials: true,
         headers: {
           'Content-Type': 'multipart/form-data',
@@ -78,7 +82,7 @@ function UserProfile(prop) {
 
   const handleUserViewlogout = async () => {
     try {
-      const reqlogout = await axios.get('http://localhost:8000/logout', { withCredentials: true });
+      const reqlogout = await axios.get(`${sa}/logout`, { withCredentials: true });
       if (reqlogout.status === 200) {
         location.reload();
       }

@@ -15,6 +15,9 @@ import { Circle } from "@mui/icons-material";
 import { green, red } from "@mui/material/colors";
 
 
+const sa=process.env.serveraddress;
+
+
 function checkTimeStatus(targetTime) {
   const currentTime = new Date();
   const targetDateTime = new Date(targetTime);
@@ -127,7 +130,7 @@ function Homepage(prop) {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/tasks", { withCredentials: true });
+      const res = await axios.get(`${sa}/tasks`, { withCredentials: true });
       settododata(res.data.tasks);
       setdataloaded(true);
     } catch (error) {
@@ -143,7 +146,7 @@ function Homepage(prop) {
 
   useEffect(()=>{
 const getfilterdtaskwithdates=async(e)=>{
-  const res=await axios.get(`http://localhost:8000/filteredtasksondate?date=${e}`,{withCredentials:true});
+  const res=await axios.get(`${sa}/filteredtasksondate?date=${e}`,{withCredentials:true});
   settododata(res.data);
 }
 if(requesteddatadate!=null){
@@ -161,7 +164,7 @@ if(requesteddatadate!=null){
     };
   
     try {
-      const restaskdone = await axios.put("http://localhost:8000/updatetodolistroute", updatedata, { withCredentials: true });
+      const restaskdone = await axios.put(`${sa}/updatetodolistroute`, updatedata, { withCredentials: true });
       toast('task updation successful!')
       // After updating, refetch the data
       fetchData();
@@ -175,7 +178,7 @@ if(requesteddatadate!=null){
       taskId: taskId,
     };
     try {
-      const restaskdone = await axios.delete("http://localhost:8000/deletetask", { withCredentials: true, data: deletetask });
+      const restaskdone = await axios.delete(`${sa}/deletetask`, { withCredentials: true, data: deletetask });
       fetchData();
       toast('task deletion successful')
 
@@ -194,7 +197,7 @@ if(requesteddatadate!=null){
     };
 
     try {
-      const addtaskres = await axios.post("http://localhost:8000/todolist", addtask,{ withCredentials: true});
+      const addtaskres = await axios.post(`${sa}/todolist`, addtask,{ withCredentials: true});
       fetchData();
       toast('task added successfully')
 

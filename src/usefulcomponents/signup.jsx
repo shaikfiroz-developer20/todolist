@@ -5,6 +5,10 @@ import axios from 'axios';
 import { ToastContainer,toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
+const sa=process.env.serveraddress;
+
+
 const AuthForm = (props) => {
 
   const {signuporloginreq}=props;
@@ -43,7 +47,7 @@ const AuthForm = (props) => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:8000/signup", formData);
+      const res = await axios.post(`${sa}/signup`, formData);
       if (res.status === 201) {
         toast("User created successfully for signup. Plaese Login");
  setShowSignup(false)
@@ -65,7 +69,7 @@ const AuthForm = (props) => {
     e.preventDefault();
   
     try {
-      const res = await axios.post("http://localhost:8000/login", formData, { withCredentials: true });
+      const res = await axios.post(`${sa}/login`, formData, { withCredentials: true });
       console.log(res);
       if (res.status === 200) {
         toast("User logged in successfully!");

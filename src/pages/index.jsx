@@ -16,6 +16,7 @@ import handleGlobalErrors from "@/usefulcomponents/sanitizeerror";
 
 handleGlobalErrors();
 
+const sa=process.env.serveraddress;
 
 function DisplayCard(prop) {
   const { elment } = prop;
@@ -103,7 +104,7 @@ const clickeddata=(e)=>{
   useEffect(() => {
     const checkUserLogin = async () => {
       try {
-        const isUserLoggedIn = await axios.get("http://localhost:8000/amilogedin", { withCredentials: true });
+        const isUserLoggedIn = await axios.get(`${sa}/amilogedin`, { withCredentials: true });
 
         if (isUserLoggedIn.status === 200) {
           setLogedin(true);

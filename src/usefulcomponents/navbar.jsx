@@ -5,6 +5,9 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Signup from './signup';
 import axios from 'axios';
 
+const sa=process.env.serveraddress;
+
+
 function Navbar(prop) {
   const { width, askedHistory, isUserLoggedIn } = prop;
   const [isMobile, setIsMobile] = useState(null);
@@ -21,7 +24,7 @@ function Navbar(prop) {
   useEffect(() => {
     const getprofilepic = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/userpic", { withCredentials: true, responseType: 'arraybuffer' });
+        const response = await axios.get(`${sa}/userpic`, { withCredentials: true, responseType: 'arraybuffer' });
         
         const blob = new Blob([response.data], { type: 'image/png' });
         const imageUrl = URL.createObjectURL(blob);
