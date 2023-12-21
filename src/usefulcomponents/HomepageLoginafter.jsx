@@ -15,7 +15,7 @@ import { Circle } from "@mui/icons-material";
 import { green, red } from "@mui/material/colors";
 
 
-const sa=process.env.serveraddress;
+const sa=process.env.NEXT_PUBLIC_API_URL;
 
 
 function checkTimeStatus(targetTime) {

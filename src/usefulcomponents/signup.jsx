@@ -6,7 +6,7 @@ import { ToastContainer,toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-const sa=process.env.serveraddress;
+const sa=process.env.NEXT_PUBLIC_API_URL;
 
 
 const AuthForm = (props) => {

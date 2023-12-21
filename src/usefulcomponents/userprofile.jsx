@@ -7,7 +7,7 @@ import { Logout } from '@mui/icons-material';
 import { RotatingLines, Vortex } from 'react-loader-spinner';
 
 
-const sa=process.env.serveraddress;
+const sa=process.env.NEXT_PUBLIC_API_URL;
 
 
 function UserProfile(prop) {

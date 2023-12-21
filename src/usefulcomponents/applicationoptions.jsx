@@ -2,6 +2,9 @@ import React from 'react';
 import style from "@/styles/compnents.module.css";
 
 
+const sa=process.env.NEXT_PUBLIC_API_URL;
+
+
 function Applicationoptions(props) {
 
 const handlesignup=(e)=>{

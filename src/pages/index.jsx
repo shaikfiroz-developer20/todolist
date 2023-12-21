@@ -16,7 +16,7 @@ import handleGlobalErrors from "@/usefulcomponents/sanitizeerror";
 
 handleGlobalErrors();
 
-const sa=process.env.serveraddress;
+const sa=process.env.NEXT_PUBLIC_API_URL;
 
 function DisplayCard(prop) {
   const { elment } = prop;

@@ -5,7 +5,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Signup from './signup';
 import axios from 'axios';
 
-const sa=process.env.serveraddress;
+const sa=process.env.NEXT_PUBLIC_API_URL;
 
 
 function Navbar(prop) {

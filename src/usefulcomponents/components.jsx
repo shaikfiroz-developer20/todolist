@@ -5,7 +5,7 @@ import axios from 'axios';
 import { RotatingLines, Vortex } from 'react-loader-spinner';
 
 
-const sa=process.env.serveraddress;
+const sa=process.env.NEXT_PUBLIC_API_URL;
 
 
 function Datess({ element }) {
