@@ -1,0 +1,99 @@
+.sidenavbarandarraowimgdiv {
+    display: flex;
+}
+
+.homepage {
+    display: flex;
+    height: 100vh;
+}
+
+.homepagemaindiv {
+    background:linear-gradient(in hsl,#486987,#2b4356);
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toastposition {
+    top: 5rem !important;
+  }
+.displaycard {
+    margin-top: 20px;
+    width: 80%;
+    background-color: #242f38 ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.displaycardp {
+    width: 85%;
+    height: auto;
+    font-family: 'Times New Roman';
+}
+.inputdata {
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    background-color: #12181d;
+    border-radius: 10px;
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.inputdatainputbox {
+    width: 100%;
+    height: 70%;
+    outline: none;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: white;
+    background-color: #12181d;
+    padding-left: 10px;
+    border-width: 0;
+}
+
+.allcardsdiv {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    height: 80vh;
+    width: 80%;
+    overflow: scroll;
+}
+
+
+
+
+.allcardsdiv::-webkit-scrollbar {
+    width: 0px;
+  
+}
+
+.downdataadddiv {
+    width: 85%;
+    position: sticky;
+    bottom: 0;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(180, 101, 255);
+}
+@media only screen and (max-width: 1000px) {
+    .inputdatainputbox {
+      width: 80vw;
+    }
+    .displaycard {
+      width: 90vw;
+    }
+    .displaycardp {
+      width: 100%;
+    }
+  }
+  

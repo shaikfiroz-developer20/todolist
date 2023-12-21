@@ -1,0 +1,51 @@
+.backgeound{
+    background:linear-gradient(in hsl,#354d62,#1d2e3b);
+    width: 98vw;
+    height: 98vh;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    position: fixed;
+    display: flex;
+    height: 98vh;
+    flex-direction: column;
+    margin-top: 1vh;
+    z-index: 2002;
+    align-items:center ;
+border-radius: 7px;
+}
+
+.formusers{
+    display: flex;
+    flex-direction: column;
+    background-color: #152029;
+    color: white;
+    min-height: 65vh;
+    width: 320px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    margin-top: 6vh;
+}
+
+.inputGroup{
+    display: flex;
+    flex-direction: column;
+}
+.profileSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formusers input{
+    height: 30px;
+    width: 250px;
+    background-color: rgb(224, 224, 224);
+    border: none;
+    outline: 1px solid #10191f;
+    color: #10191f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+}

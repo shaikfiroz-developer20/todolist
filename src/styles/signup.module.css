@@ -1,0 +1,88 @@
+/* signup.module.css */
+
+.signupFormouterdiv {
+    width: 99vw;
+    background:linear-gradient(in hsl,#354d62,#1d2e3b);
+    border-radius: 5px;
+    position: fixed;
+    display: flex;
+    height: 98vh;
+    flex-direction: column;
+    margin-top: 1vh;
+    z-index: 2002;
+    margin-left: 0.5vw;
+    align-items:center ;
+    gap: 100px;
+  }
+
+  .signupform{
+    width: 330px;
+background-color: #181514;
+padding: 10px;
+border-radius: 10px;
+  }
+  
+  
+ .label {
+    margin: 5px 0;
+  }
+  
+.inputs{
+    border-radius: 5px;
+    background-color: #1a191c;
+    padding-left: 5px;
+    height: 35px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    border-width: 0;
+    color: white;
+    outline: none;
+}
+  
+  .signupBtn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .signupBtn:hover {
+    background-color: #002c5b;
+  }
+  
+  .loginLink {
+    cursor: pointer;
+    color: blue;
+  }
+  
+  .googleSignupBtn {
+    background-color: #db4437;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .googleSignupBtn:hover {
+    background-color: #c1351e;
+  }
+  
+  .signupEnd {
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  .line1,
+  .line2 {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ccc;
+  }
+  
